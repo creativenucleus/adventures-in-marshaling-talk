@@ -12,7 +12,9 @@ creativenucleus.com
 - A basic introduction to marshalling
 - What's magic about it?
 - interface{}
+- Reflection
 - ```struct:"tags"```
+- Some examples!
 
 * What is Marshalling?
 
@@ -60,7 +62,7 @@ Nothing!
 
 It's just a term that's been adopted across packages.
 
-And it tends to utilise jazzy things, like:
+And it's predisposed to utilise jazzy things, like:
 
 - interface{}
 - Struct tags
@@ -81,7 +83,7 @@ Matches all types, for example:
 - int
 - etc...
 
-But in this case, most useful for:
+But for marshalling, most useful for:
 
 - struct
 
@@ -103,9 +105,11 @@ But in this case, most useful for:
 
 * Struct Tags
 
-Declarations on your fields that can be read by reflection.
+Declarations on your fields.
 
 .code examples/8.go
+
+These can be read by reflection.
 
 * Example
 
@@ -115,6 +119,14 @@ Declarations on your fields that can be read by reflection.
 
 Put them all together!
 
+Morse Marshaller
+
+[[https://github.com/creativenucleus/marshalling-morse]]
+
+Input Validation Example
+
+[[https://github.com/creativenucleus/inputvalidation]]
+
 * With Great Power
 
-etc, etc...
+:)

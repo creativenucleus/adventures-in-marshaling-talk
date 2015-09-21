@@ -19,5 +19,6 @@ func main() {
 
 func peek(v interface{}) {
     value := reflect.ValueOf(v)
-    fmt.Printf("%s", value.Type().Field(0).Tag)
+    field, _ := value.Type().FieldByName("TwitterName")
+    fmt.Printf("%s", field.Tag)
 }
