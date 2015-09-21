@@ -1,0 +1,120 @@
+Adventures in Marshalling
+Golang North East
+22 Oct 2015
+
+James Rutherford
+creativenucleus
+@jtruk
+creativenucleus.com
+
+* Overview
+
+- A basic introduction to marshalling
+- What's magic about it?
+- interface{}
+- ```struct:"tags"```
+
+* What is Marshalling?
+
+Re-encoding some data in another format.
+
+(Typically encoding a Go struct in another format)
+
+* Examples
+
+- json (StdLib: encoding/json)
+- xml (StdLib: encoding/xml)
+- mgo (bson)
+- sqlx driver (Marshal to and from rows)
+
+The opposite of Marshal() is Unmarshal().
+
+* Why Marshalling?
+
+Quick, easy, battle-tested!
+
+Conceptually nice - push and pull your structures into the required format for:
+
+- Web API
+- Communication between your services
+
+"Assemble and arrange (a group of people, especially troops) in order"
+
+You're the sheriff of data town!
+
+* What Does Marshalling look like?
+
+.code examples/1.go
+
+* Marshalling Example
+
+.play examples/2.go
+
+* Marshalling with Struct Tags
+
+.play examples/3.go
+
+* What's Magic about Marshalling?
+
+Nothing!
+
+It's just a term that's been adopted across packages.
+
+And it tends to utilise jazzy things, like:
+
+- interface{}
+- Struct tags
+
+And, to make both of those work:
+
+- REFLECTION!
+
+* interface{}
+
+The 'empty interface'
+
+    func Marshal(v interface{}) ([]byte, error)
+    
+Matches all types, for example:
+
+- string
+- int
+- etc...
+
+But in this case, most useful for:
+
+- struct
+
+* Example
+
+.play examples/4.go
+
+* Example
+
+.play examples/5.go
+
+* Example
+
+.play examples/6.go
+
+* Example
+
+.play -edit examples/7.go
+
+* Struct Tags
+
+Declarations on your fields that can be read by reflection.
+
+.code examples/8.go
+
+* Example
+
+.play examples/9.go
+
+* interface{}, Reflection and Struct Tags
+
+Put them all together!
+
+* With Great Power
+
+etc, etc...
