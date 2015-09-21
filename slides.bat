@@ -1,1 +1,1 @@
-%GOPATH%\bin\present.exe
+%GOPATH%bin\present.exe

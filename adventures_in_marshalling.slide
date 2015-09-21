@@ -1,4 +1,4 @@
-Adventures in Marshalling
+﻿Adventures in Marshalling
 Golang North East
 22 Oct 2015
 
@@ -31,9 +31,15 @@ Re-encoding some data in another format.
 
 The opposite of Marshal() is Unmarshal().
 
-* Why Marshalling?
+* What's Good about Marshalling?
 
-Quick, easy, battle-tested!
+Straightforward interface.
+
+Mapping between fields of one data type and another.
+
+Sensible default behaviour.
+
+Ability to override.
 
 Conceptually nice - push and pull your structures into the required format for:
 
@@ -87,6 +93,14 @@ But for marshalling, most useful for:
 
 - struct
 
+* Now We Have a Handle But We Don't Know What the Door Looks Like?
+
+How do we do anything useful with interface{}?
+
+Reflection!
+
+Allows interrogation and traversal of structures.
+
 * Example
 
 .play examples/4.go
@@ -109,7 +123,7 @@ Declarations on your fields.
 
 .code examples/8.go
 
-These can be read by reflection.
+These too can be inspected by reflection.
 
 * Example
 
@@ -133,7 +147,7 @@ Input Validation Example
 
 * Some Good Reading
 
-Overview of reflection in Go by someone whose brain is much more powerful than mine:
+Overview of reflection in Go by someone whose brain is the size of a planet:
 
 [[http://blog.golang.org/laws-of-reflection][Rob Pike (Go Blog) - Laws of Reflection]]
 
@@ -147,4 +161,4 @@ Adding, removing fields, compositing structs, splitting objects, renaming fields
 
 * Other Fun
 
-Join me at [[http://www.dotgo.eu/][DotGo]] in Paris [[https://bit.ly/dotgo][(with discount for savvy Gophers!)]]
+Join me at [[http://www.dotgo.eu/][DotGo]] in Paris [[https://bit.ly/dotgo][(with discount for savvy Gophers!... bit.ly/dotgo)]]
