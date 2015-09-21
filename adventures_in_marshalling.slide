@@ -130,3 +130,21 @@ Input Validation Example
 * With Great Power
 
 :)
+
+* Some Good Reading
+
+Overview of reflection in Go by someone whose brain is much more powerful than mine:
+
+[[http://blog.golang.org/laws-of-reflection][Rob Pike (Go Blog) - Laws of Reflection]]
+
+Handling flexible JSON structures and the custom marshalling of structures:
+
+[[http://attilaolah.eu/2013/11/29/json-decoding-in-go/][Attila Oláh - JSON Decoding in Go]]
+
+Adding, removing fields, compositing structs, splitting objects, renaming fields:
+
+[[http://attilaolah.eu/2014/09/10/json-and-struct-composition-in-go/][Attila Oláh - JSON and struct composition in Go]]
+
+* Other Fun
+
+Join me at [[http://www.dotgo.eu/][DotGo]] in Paris [[https://bit.ly/dotgo][(with discount for savvy Gophers!)]]
