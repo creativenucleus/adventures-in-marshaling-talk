@@ -1,4 +1,4 @@
-﻿Adventures in Marshalling
+﻿Adventures in Marshaling
 Golang North East
 22 Oct 2015
 
@@ -9,14 +9,14 @@ creativenucleus.com
 
 * Overview
 
-- A basic introduction to marshalling
+- A basic introduction to marshaling
 - What's magic about it?
 - interface{}
 - Reflection
 - ```struct:"tags"```
 - Some examples!
 
-* What is Marshalling?
+* What is Marshaling?
 
 Re-encoding some data in another format.
 
@@ -26,12 +26,17 @@ Re-encoding some data in another format.
 
 - json (StdLib: encoding/json)
 - xml (StdLib: encoding/xml)
+- yaml
 - mgo (bson)
 - sqlx driver (Marshal to and from rows)
 
 The opposite of Marshal() is Unmarshal().
 
-* What's Good about Marshalling?
+    func Marshal(v interface{}) ([]byte, error)
+
+    func Unmarshal(data []byte, v interface{}) error
+
+* What's Good about Marshaling?
 
 Straightforward interface.
 
@@ -50,19 +55,19 @@ Conceptually nice - push and pull your structures into the required format for:
 
 You're the sheriff of data town!
 
-* What Does Marshalling look like?
+* What Does Marshaling look like?
 
 .code examples/1.go
 
-* Marshalling Example
+* Marshaling Example
 
 .play examples/2.go
 
-* Marshalling with Struct Tags
+* Marshaling with Struct Tags
 
 .play examples/3.go
 
-* What's Magic about Marshalling?
+* What's Magic about Marshaling?
 
 Nothing!
 
@@ -89,7 +94,7 @@ Matches all types, for example:
 - int
 - etc...
 
-But for marshalling, most useful for:
+But for marshaling, most useful for:
 
 - struct
 
@@ -133,9 +138,9 @@ These too can be inspected by reflection.
 
 Put them all together!
 
-Morse Marshaller
+Morse Marshaler
 
-[[https://github.com/creativenucleus/marshalling-morse]]
+[[https://github.com/creativenucleus/marshaling-morse]]
 
 Input Validation Example
 
@@ -151,13 +156,15 @@ Overview of reflection in Go by someone whose brain is the size of a planet:
 
 [[http://blog.golang.org/laws-of-reflection][Rob Pike (Go Blog) - Laws of Reflection]]
 
-Handling flexible JSON structures and the custom marshalling of structures:
+Handling flexible JSON structures and the custom marshaling of structures:
 
 [[http://attilaolah.eu/2013/11/29/json-decoding-in-go/][Attila Oláh - JSON Decoding in Go]]
 
 Adding, removing fields, compositing structs, splitting objects, renaming fields:
 
 [[http://attilaolah.eu/2014/09/10/json-and-struct-composition-in-go/][Attila Oláh - JSON and struct composition in Go]]
+
+[[https://github.com/asaskevich/govalidator][A well-featured data validator]]
 
 * Other Fun
 
